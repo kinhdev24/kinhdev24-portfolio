@@ -57,7 +57,7 @@ export default function ControlCenter() {
 
   return (
     <div
-      className="absolute right-2 top-[calc(var(--menu-bar-height))] flex flex-col h-full"
+      className="absolute right-0 top-[calc(var(--menu-bar-height))] flex flex-col h-full"
       ref={controlCenterRef}
     >
       <div

@@ -54,49 +54,25 @@ export function MacosDock() {
       href: "#",
     },
     {
-      title: "ReactJS",
+      title: "Messages",
       icon: (
         <BlurImage
-          src="/techstack/react-logo.svg"
+          src="/macos-icon/message-icon.svg"
           width={100}
           height={100}
-          alt="React Logo"
+          alt="Message Icon"
         />
       ),
       href: "#",
     },
     {
-      title: "NextJS",
+      title: "Mail",
       icon: (
         <BlurImage
-          src="/techstack/nextjs-logo.svg"
+          src="/macos-icon/mail-icon.svg"
           width={100}
           height={100}
-          alt="Nextjs Logo"
-        />
-      ),
-      href: "#",
-    },
-    {
-      title: "Javascript",
-      icon: (
-        <BlurImage
-          src="/techstack/js-logo.svg"
-          width={100}
-          height={100}
-          alt="JS Logo"
-        />
-      ),
-      href: "#",
-    },
-    {
-      title: "Typescript",
-      icon: (
-        <BlurImage
-          src="/techstack/ts-logo.svg"
-          width={100}
-          height={100}
-          alt="TS Logo"
+          alt="Mail Icon"
         />
       ),
       href: "#",
@@ -121,6 +97,18 @@ export function MacosDock() {
           width={100}
           height={100}
           alt="Calendar Icon"
+        />
+      ),
+      href: "#",
+    },
+    {
+      title: "Contacts",
+      icon: (
+        <BlurImage
+          src="/macos-icon/contact-icon.svg"
+          width={100}
+          height={100}
+          alt="Contact Icon"
         />
       ),
       href: "#",
@@ -154,21 +142,33 @@ export function MacosDock() {
       icon: (
         <BlurImage
           src="/macos-icon/apple-tv-icon.svg"
-          width={100}
-          height={100}
+          width={120}
+          height={120}
           alt="Apple TV Icon"
         />
       ),
       href: "#",
     },
     {
-      title: "Messages",
+      title: "Podcasts",
       icon: (
         <BlurImage
-          src="/macos-icon/message-icon.svg"
+          src="/macos-icon/podcast-icon.svg"
           width={100}
           height={100}
-          alt="Message Icon"
+          alt="Podcasts Icon"
+        />
+      ),
+      href: "#",
+    },
+    {
+      title: "News",
+      icon: (
+        <BlurImage
+          src="/macos-icon/news-icon.svg"
+          width={100}
+          height={100}
+          alt="News Icon"
         />
       ),
       href: "#",

@@ -15,6 +15,7 @@ import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { Draggable } from "gsap/Draggable"
 import { Search } from "lucide-react"
+import { cn } from "@/lib/utils"
 
 gsap.registerPlugin(useGSAP, Draggable)
 
@@ -24,22 +25,182 @@ const apps = [
   {
     name: "ReactJS",
     id: 1,
-    logo: "/techstack/react-logo.svg",
+    logo: "/techstack/ReactJS.svg",
+    href: "https://react.dev/",
   },
   {
     name: "NextJS",
     id: 2,
-    logo: "/techstack/nextjs-logo.svg",
+    logo: "/techstack/NextJS.svg",
+    href: "https://nextjs.org/",
   },
   {
     name: "JavaScript",
     id: 3,
-    logo: "/techstack/js-logo.svg",
+    logo: "/techstack/Javascript.svg",
+    href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
   {
     name: "TypeScript",
     id: 4,
-    logo: "/techstack/ts-logo.svg",
+    logo: "/techstack/Typescript.svg",
+    href: "https://www.typescriptlang.org/",
+  },
+  {
+    name: "Vite",
+    id: 5,
+    logo: "/techstack/Vite.svg",
+    href: "https://vitejs.dev/",
+  },
+  {
+    name: "Auth0",
+    id: 6,
+    logo: "/techstack/Auth0.svg",
+    href: "https://auth0.com/",
+  },
+  {
+    name: "TailwindCss",
+    id: 7,
+    logo: "/techstack/tailwind-css.svg",
+    href: "https://tailwindcss.com/",
+  },
+  {
+    name: "Shadcn-ui",
+    id: 8,
+    logo: "/techstack/Shadcn.svg",
+    href: "https://ui.shadcn.com/",
+  },
+  {
+    name: "HeroUI",
+    id: 9,
+    logo: "/techstack/heroui.svg",
+    href: "https://www.heroui.com/",
+  },
+  {
+    name: "Ant Design",
+    id: 10,
+    logo: "/techstack/antd.svg",
+    href: "https://ant.design/",
+  },
+  {
+    name: "MuiUI",
+    id: 11,
+    logo: "/techstack/mui-ui.svg",
+    href: "https://mui.com/",
+  },
+  {
+    name: "Sass",
+    id: 12,
+    logo: "/techstack/sass.svg",
+    href: "https://sass-lang.com/",
+  },
+  {
+    name: "Tanstack",
+    id: 13,
+    logo: "/techstack/tanstack.svg",
+    href: "https://tanstack.com/",
+  },
+  {
+    name: "Zustand",
+    id: 14,
+    logo: "/techstack/zustand.svg",
+    href: "https://zustand-demo.pmnd.rs/",
+  },
+  {
+    name: "Redux",
+    id: 15,
+    logo: "/techstack/redux.svg",
+    href: "https://redux.js.org/",
+  },
+  {
+    name: "React-hook-form",
+    id: 16,
+    logo: "/techstack/react-hook-form.svg",
+    href: "https://react-hook-form.com/",
+  },
+  {
+    name: "Mapbox",
+    id: 17,
+    logo: "/techstack/mapbox.svg",
+    href: "https://www.mapbox.com/",
+  },
+  {
+    name: "Metamask",
+    id: 18,
+    logo: "/techstack/metamask.svg",
+    href: "https://metamask.io/",
+  },
+  {
+    name: "DnD Kit",
+    id: 19,
+    logo: "/techstack/dnd-kit.svg",
+    href: "https://dndkit.com/",
+  },
+  {
+    name: "Dayjs",
+    id: 20,
+    logo: "/techstack/dayjs.svg",
+    href: "https://day.js.org/",
+  },
+  {
+    name: "Eslint",
+    id: 21,
+    logo: "/techstack/eslint.svg",
+    href: "https://eslint.org/",
+  },
+  {
+    name: "Prettier",
+    id: 22,
+    logo: "/techstack/prettier.svg",
+    href: "https://prettier.io/",
+  },
+  {
+    name: "Biome",
+    id: 23,
+    logo: "/techstack/biome.svg",
+    href: "https://biomejs.dev/",
+  },
+  {
+    name: "JWT",
+    id: 24,
+    logo: "/techstack/jwt.svg",
+    href: "https://jwt.io/",
+  },
+  {
+    name: "Git",
+    id: 25,
+    logo: "/techstack/git-branch.svg",
+    href: "https://git-scm.com/",
+  },
+  {
+    name: "Github",
+    id: 26,
+    logo: "/techstack/github.svg",
+    href: "https://github.com/",
+  },
+  {
+    name: "VS Code",
+    id: 27,
+    logo: "/techstack/vscode.svg",
+    href: "https://code.visualstudio.com/",
+  },
+  {
+    name: "Bitbucket",
+    id: 28,
+    logo: "/techstack/bitbucket.svg",
+    href: "https://bitbucket.org/",
+  },
+  {
+    name: "Jira",
+    id: 29,
+    logo: "/techstack/jira.svg",
+    href: "https://www.atlassian.com/software/jira",
+  },
+  {
+    name: "Vercel",
+    id: 30,
+    logo: "/techstack/vercel.svg",
+    href: "https://vercel.com/",
   },
 ]
 
@@ -52,6 +213,7 @@ const Launchpad = () => {
       id: number
       name: string
       logo: string
+      href: string
     }[][]
   >([])
 
@@ -147,32 +309,39 @@ const Launchpad = () => {
         <Input className="w-full pl-10" placeholder="Search" />
       </div>
 
-      <Carousel className="flex-1 h-[calc(100dvh-12rem)] w-full mt-12">
-        <CarouselContent>
-          {appsSplit.map((apps, index) => (
-            <CarouselItem key={index}>
-              <div
-                className="p-1 min-h-[calc(100dvh-12rem)] max-h-[calc(100dvh-12rem)] w-full grid grid-cols-6 gap-4 items-start justify-start"
-                style={{ gridAutoRows: "1fr" }}
-              >
-                {apps.map((app) => (
-                  <div
-                    key={app.id}
-                    className="aspect-square flex items-center justify-start flex-col gap-2"
-                  >
-                    <BlurImage
-                      src={app.logo}
-                      alt={app.name}
-                      width={100}
-                      height={100}
-                      data-name="stack-icon"
-                    />
-                    <span className="text-sm font-normal">{app.name}</span>
-                  </div>
-                ))}
-              </div>
-            </CarouselItem>
-          ))}
+      <Carousel className="">
+        <CarouselContent className="flex-1 h-[calc(100dvh-12rem)] w-full mt-12">
+          {appsSplit.map((apps, index) => {
+            const isFullRow = apps.length % 6 === 0
+            return (
+              <CarouselItem key={index}>
+                <div
+                  className={cn(
+                    "grid grid-cols-6 gap-4 p-1 w-full",
+                    isFullRow ? "justify-between" : "justify-start"
+                  )}
+                >
+                  {apps.map((app) => (
+                    <div
+                      key={app.id}
+                      className="flex items-center justify-start flex-col gap-2"
+                    >
+                      <BlurImage
+                        src={app.logo}
+                        alt={app.name}
+                        width={100}
+                        height={100}
+                        data-name="stack-icon"
+                        className="cursor-pointer"
+                        onClick={() => window.open(app.href, "_blank")}
+                      />
+                      <span className="text-sm font-normal">{app.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </CarouselItem>
+            )
+          })}
         </CarouselContent>
       </Carousel>
     </div>

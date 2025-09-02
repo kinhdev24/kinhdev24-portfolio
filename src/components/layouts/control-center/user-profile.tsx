@@ -17,7 +17,7 @@ export default function UserProfile() {
       <div className="flex items-center gap-2">
         <div className="w-10 h-10 rounded-full bg-white/20 p-[2px]">
           <BlurImage
-            src="/images/emoji-avatar.webp"
+            src="/images/personal/emoji-avatar.webp"
             alt="user-profile"
             width={500}
             height={500}

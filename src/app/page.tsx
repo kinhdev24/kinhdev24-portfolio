@@ -2,6 +2,7 @@ import ControlCenter from "@/components/layouts/control-center"
 import { MacosDock } from "@/components/layouts/dock"
 import Launchpad from "@/components/layouts/launchpad"
 import Menubar from "@/components/layouts/menu-bar"
+import { Widgets } from "@/components/layouts/widgets"
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <MacosDock />
       <Launchpad />
       <ControlCenter />
+      <Widgets />
     </div>
   )
 }
