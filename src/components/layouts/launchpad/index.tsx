@@ -67,7 +67,7 @@ const apps = [
   {
     name: "Shadcn-ui",
     id: 8,
-    logo: "/techstack/Shadcn.svg",
+    logo: "/techstack/shadcn.svg",
     href: "https://ui.shadcn.com/",
   },
   {
