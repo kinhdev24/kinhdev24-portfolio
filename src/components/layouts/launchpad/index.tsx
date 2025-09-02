@@ -25,37 +25,37 @@ const apps = [
   {
     name: "ReactJS",
     id: 1,
-    logo: "/techstack/ReactJS.svg",
+    logo: "/techstack/reactjs.svg",
     href: "https://react.dev/",
   },
   {
     name: "NextJS",
     id: 2,
-    logo: "/techstack/NextJS.svg",
+    logo: "/techstack/nextjs.svg",
     href: "https://nextjs.org/",
   },
   {
     name: "JavaScript",
     id: 3,
-    logo: "/techstack/Javascript.svg",
+    logo: "/techstack/javascript.svg",
     href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
   {
     name: "TypeScript",
     id: 4,
-    logo: "/techstack/Typescript.svg",
+    logo: "/techstack/typescript.svg",
     href: "https://www.typescriptlang.org/",
   },
   {
     name: "Vite",
     id: 5,
-    logo: "/techstack/Vite.svg",
+    logo: "/techstack/vite.svg",
     href: "https://vitejs.dev/",
   },
   {
     name: "Auth0",
     id: 6,
-    logo: "/techstack/Auth0.svg",
+    logo: "/techstack/auth0.svg",
     href: "https://auth0.com/",
   },
   {
