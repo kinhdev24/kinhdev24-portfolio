@@ -36,13 +36,13 @@ export const Widgets = () => {
             </div>
             <div className="p-4 bg-zinc-800/20 flex-1 rounded-b-[10px] grid grid-cols-4 gap-2">
               <BlurImage
-                src="/techstack/reactJS.svg"
+                src="/techstack/reactjs.svg"
                 width={57}
                 height={57}
                 alt="React Logo"
               />
               <BlurImage
-                src="/techstack/nextJS.svg"
+                src="/techstack/nextjs.svg"
                 width={57}
                 height={57}
                 alt="Nextjs Logo"
