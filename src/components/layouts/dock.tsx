@@ -26,7 +26,6 @@ export function MacosDock() {
         />
       ),
     },
-
     {
       title: "Launchpad",
       icon: (

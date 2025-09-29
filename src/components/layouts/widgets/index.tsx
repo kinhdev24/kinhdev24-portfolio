@@ -11,7 +11,7 @@ export const Widgets = () => {
       <div className="w-max grid grid-cols-2 gap-4">
         <ClockWidget className="size-[135px]" />
         <ActivityWidget className="size-[135px]" />
-        <div className="col-span-2">
+        <div className="col-span-2 cursor-pointer">
           <div className="w-full h-full bg-gradient-to-b from-zinc-600 to-zinc-800 rounded-[10px] flex flex-col">
             <div className="p-4 relative flex gap-4 items-end">
               <PodcastsIcon className="text-white absolute top-4 right-4" />
